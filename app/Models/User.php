@@ -48,4 +48,28 @@ class User extends Authenticatable
     {
         return $this->role === 'user';
     }
+
+    /**
+     * Check if user is active
+     */
+    public function isActive()
+    {
+        return $this->is_active;
+    }
+
+    /**
+     * Scope for active users
+     */
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', true);
+    }
+
+    /**
+     * Get role attribute
+     */
+    public function getRoleAttribute($value)
+    {
+        return strtolower($value);
+    }
 }
