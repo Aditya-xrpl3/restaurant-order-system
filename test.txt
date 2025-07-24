@@ -1,0 +1,6 @@
+php artisan make:migration create_categories_table 
+php artisan make:migration create_products_table
+php artisan make:migration create_tables_table
+php artisan make:migration create_orders_table
+php artisan make:migration create_order_items_table
+php artisan make:migration create_receipts_table
